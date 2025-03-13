@@ -8,7 +8,7 @@ se encuentra la variable ```apiKey```, donde se puede cambiar la clave de API se
 
 ```-IMPORTANTE-``` 
 2. Para propósitos de la prueba, la clave de API proporcionada en el correo electrónico de la prueba está predefinida.
-    - En un entorno de desarrollo comercial, la clave de API debería ocultarse utilizando un archivo ```.env``` por razones de seguridad.
+- En un entorno de desarrollo comercial, la clave de API debería ocultarse utilizando un archivo ```.env``` por razones de seguridad.
 
 3. Desde el editor de código, seleccionar el dispositivo en el que se ejecutará la aplicación, ya sea un **dispositivo físico** o **un emulador de Android Studio**.
 
