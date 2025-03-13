@@ -13,7 +13,7 @@ se encuentra la variable ```apiKey```, donde se puede cambiar la clave de API se
 
 4. Utilizar el siguiente comando para ejecutar la aplicación:
 
- -```flutter run``` o presionar ```F5``` para ejecutar la aplicación en el editor de código.
+- ```flutter run``` o presionar ```F5``` para ejecutar la aplicación en el editor de código.
 
 
 - Versión de flutter: flutter 3.29.1
