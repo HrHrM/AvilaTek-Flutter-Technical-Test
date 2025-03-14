@@ -31,3 +31,18 @@ Desde el editor de código, seleccionar el dispositivo en el que se ejecutará l
 Ejecutar el siguiente comando en la terminal o usar **F5** en el editor de código:   
 ```sh
 flutter run
+```
+
+---
+
+### **3️⃣ Ejecutar la Aplicación** 
+# Ejecutar todos los tests
+flutter test  
+
+# Ejecutar un test específico
+flutter test test/movies_screen_test.dart  
+
+# Ejecutar tests filtrando por descripción
+flutter test --plain-name "TEST: MovieCard renders correctly with title and score"
+
+
