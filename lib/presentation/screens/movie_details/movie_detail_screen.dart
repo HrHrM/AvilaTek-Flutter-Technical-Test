@@ -42,16 +42,19 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
             return FadeIn(
               child: Stack(
                 children: [
-                  CachedNetworkImage(
-                    imageUrl:
-                        "${ApiConstants.imageBaseURL}${state.movie.posterPath}",
-                    placeholder:
-                        (context, url) => const Center(child: CustomLoader()),
-                    errorWidget:
-                        (context, url, error) => const Icon(Icons.error),
-                    width: double.infinity,
-                    height: double.infinity,
-                    fit: BoxFit.cover,
+                  Hero(
+                    tag: state.movie.id,
+                    child: CachedNetworkImage(
+                      imageUrl:
+                          "${ApiConstants.imageBaseURL}${state.movie.posterPath}",
+                      placeholder:
+                          (context, url) => const Center(child: CustomLoader()),
+                      errorWidget:
+                          (context, url, error) => const Icon(Icons.error),
+                      width: double.infinity,
+                      height: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                   Positioned(
                     bottom: 0,

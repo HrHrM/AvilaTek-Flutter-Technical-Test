@@ -18,13 +18,19 @@ class MovieCard extends StatelessWidget {
         child: Stack(
           alignment: Alignment.bottomLeft,
           children: [
-            CachedNetworkImage(
-              imageUrl: "${ApiConstants.imageBaseURL}${movie['poster_path']}",
-              placeholder: (context, url) => const CustomLoader(),
-              errorWidget: (context, url, error) => const Icon(Icons.error),
-              width: double.infinity,
-              height: index.isEven ? 250 : 280,
-              fit: BoxFit.cover,
+            Hero(
+              tag: movie['id'],
+              child: CachedNetworkImage(
+                imageUrl:
+                    (movie['poster_path'] != null)
+                        ? "${ApiConstants.imageBaseURL}${movie['poster_path']}"
+                        : 'https://df2sm3urulav.cloudfront.net/tenants/gr/uploads/content/izhvbe9b8frdujqg.jpg',
+                placeholder: (context, url) => const CustomLoader(),
+                errorWidget: (context, url, error) => const Icon(Icons.error),
+                width: double.infinity,
+                height: index.isEven ? 250 : 280,
+                fit: BoxFit.cover,
+              ),
             ),
             Container(
               height: index.isEven ? 250 : 280,

@@ -77,7 +77,9 @@ class _ActorDetailsPageState extends State<ActorDetailsPage> {
                                   ? NetworkImage(
                                     "${ApiConstants.imageBaseURL}${state.actor.profilePath}",
                                   )
-                                  : null,
+                                  : NetworkImage(
+                                    'https://df2sm3urulav.cloudfront.net/tenants/gr/uploads/content/izhvbe9b8frdujqg.jpg',
+                                  ),
                           backgroundColor: Colors.grey[300],
                         ),
                         const SizedBox(width: 16),
