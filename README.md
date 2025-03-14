@@ -35,7 +35,7 @@ flutter run
 
 ---
 
-### **3️⃣ Ejecutar la Aplicación** 
+### **3️⃣ Testing la Aplicación** 
 ## Ejecutar todos los tests
 ```sh
 flutter test  
