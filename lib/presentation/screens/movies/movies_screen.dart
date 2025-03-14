@@ -81,7 +81,7 @@ class MoviesScreen extends StatelessWidget {
                   horizontal: 16,
                   vertical: 10,
                 ),
-                itemCount: 15,
+                itemCount: state.movies.length,
                 itemBuilder: (context, index) {
                   final movie = state.movies[index];
                   return GestureDetector(
