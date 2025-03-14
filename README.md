@@ -28,6 +28,6 @@ En el archivo **`constants.dart`** ubicado en:
 ### **2️⃣ Ejecutar la Aplicación**  
 Desde el editor de código, seleccionar el dispositivo en el que se ejecutará la aplicación (**físico o emulador**).  
 
-Ejecutar el siguiente comando en la terminal:  
+Ejecutar el siguiente comando en la terminal o usar **F5** en el editor de código:   
 ```sh
 flutter run
