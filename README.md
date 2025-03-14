@@ -36,17 +36,17 @@ flutter run
 ---
 
 ### **3️⃣ Ejecutar la Aplicación** 
-# Ejecutar todos los tests
+## Ejecutar todos los tests
 ```sh
 flutter test  
 ```
 
-# Ejecutar un test específico
+## Ejecutar un test específico
 ```sh
 flutter test test/movies_screen_test.dart  
 ```
 
-# Ejecutar tests filtrando por descripción
+## Ejecutar tests filtrando por descripción
 ```sh
 flutter test --plain-name "TEST: MovieCard renders correctly with title and score"
 ```
