@@ -28,7 +28,7 @@ mixin _$Actor {
   @JsonKey(name: "biography")
   String? get biography => throw _privateConstructorUsedError;
   @JsonKey(name: "movie_credits", defaultValue: {})
-  Map<String, dynamic>? get movieCredits => throw _privateConstructorUsedError; // ✅ Store full movie_credits object
+  Map<String, dynamic>? get movieCredits => throw _privateConstructorUsedError;
   @JsonKey(name: "cast", defaultValue: [])
   List<Map<String, dynamic>>? get knownFor =>
       throw _privateConstructorUsedError;
@@ -236,9 +236,7 @@ class _$ActorImpl implements _Actor {
     return EqualUnmodifiableMapView(value);
   }
 
-  // ✅ Store full movie_credits object
   final List<Map<String, dynamic>>? _knownFor;
-  // ✅ Store full movie_credits object
   @override
   @JsonKey(name: "cast", defaultValue: [])
   List<Map<String, dynamic>>? get knownFor {
@@ -324,7 +322,7 @@ abstract class _Actor implements Actor {
   String? get biography;
   @override
   @JsonKey(name: "movie_credits", defaultValue: {})
-  Map<String, dynamic>? get movieCredits; // ✅ Store full movie_credits object
+  Map<String, dynamic>? get movieCredits;
   @override
   @JsonKey(name: "cast", defaultValue: [])
   List<Map<String, dynamic>>? get knownFor;

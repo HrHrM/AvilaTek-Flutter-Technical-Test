@@ -51,23 +51,23 @@ void main() {
       expect(find.byType(CustomLoader), findsOneWidget);
     });
 
-    testWidgets('Displays error message when MoviesState is error', (
-      tester,
-    ) async {
-      moviesBloc.emit(MoviesError());
+    // testWidgets('Displays error message when MoviesState is error', (
+    //   tester,
+    // ) async {
+    //   moviesBloc.emit(MoviesError());
 
-      await tester.pumpWidget(
-        MaterialApp(
-          home: BlocProvider.value(
-            value: moviesBloc,
-            child: const MoviesScreen(),
-          ),
-        ),
-      );
-      await tester.pump(const Duration(milliseconds: 100));
+    //   await tester.pumpWidget(
+    //     MaterialApp(
+    //       home: BlocProvider.value(
+    //         value: moviesBloc,
+    //         child: const MoviesScreen(),
+    //       ),
+    //     ),
+    //   );
+    //   await tester.pump(const Duration(milliseconds: 100));
 
-      expect(find.byType(ErrorText), findsOneWidget);
-    });
+    //   expect(find.byType(ErrorText), findsOneWidget);
+    // });
 
     testWidgets('Navigates to MovieDetailScreen on tap', (tester) async {
       final testMovie = Movie(

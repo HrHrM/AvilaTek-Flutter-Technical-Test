@@ -16,4 +16,7 @@ class MoviesLoaded extends MoviesState {
   List<Object> get props => [movies];
 }
 
-class MoviesError extends MoviesState {}
+class MoviesError extends MoviesState {
+  final String message;
+  MoviesError(this.message);
+}

@@ -8,6 +8,7 @@ class ApiClient {
     try {
       params ??= {};
       params['api_key'] = ApiConstants.apiKey;
+      // print('URL:${ApiConstants.baseURL}, $endpoint, $params');
       final response = await _dio.get(endpoint, queryParameters: params);
       return response;
     } catch (e) {

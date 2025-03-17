@@ -7,9 +7,13 @@ part 'movie.g.dart';
 class Movie with _$Movie {
   factory Movie({
     required int id,
-    required String title,
-    @JsonKey(name: "vote_average") required double voteAverage,
-    @JsonKey(name: "poster_path") required String posterPath,
+    @Default('No Title') String title,
+    @JsonKey(name: "vote_average")
+    @Default(0.0)
+    double voteAverage, // 👈 Default to 0.0
+    @JsonKey(name: "poster_path")
+    @Default('')
+    String posterPath, // 👈 Default to empty string
   }) = _Movie;
 
   factory Movie.fromJson(Map<String, dynamic> json) => _$MovieFromJson(json);

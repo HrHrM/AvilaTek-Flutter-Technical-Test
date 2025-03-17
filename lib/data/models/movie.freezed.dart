@@ -24,7 +24,7 @@ mixin _$Movie {
   int get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   @JsonKey(name: "vote_average")
-  double get voteAverage => throw _privateConstructorUsedError;
+  double get voteAverage => throw _privateConstructorUsedError; // 👈 Default to 0.0
   @JsonKey(name: "poster_path")
   String get posterPath => throw _privateConstructorUsedError;
 
@@ -165,9 +165,9 @@ class __$$MovieImplCopyWithImpl<$Res>
 class _$MovieImpl implements _Movie {
   _$MovieImpl({
     required this.id,
-    required this.title,
-    @JsonKey(name: "vote_average") required this.voteAverage,
-    @JsonKey(name: "poster_path") required this.posterPath,
+    this.title = 'No Title',
+    @JsonKey(name: "vote_average") this.voteAverage = 0.0,
+    @JsonKey(name: "poster_path") this.posterPath = '',
   });
 
   factory _$MovieImpl.fromJson(Map<String, dynamic> json) =>
@@ -176,10 +176,12 @@ class _$MovieImpl implements _Movie {
   @override
   final int id;
   @override
+  @JsonKey()
   final String title;
   @override
   @JsonKey(name: "vote_average")
   final double voteAverage;
+  // 👈 Default to 0.0
   @override
   @JsonKey(name: "poster_path")
   final String posterPath;
@@ -224,9 +226,9 @@ class _$MovieImpl implements _Movie {
 abstract class _Movie implements Movie {
   factory _Movie({
     required final int id,
-    required final String title,
-    @JsonKey(name: "vote_average") required final double voteAverage,
-    @JsonKey(name: "poster_path") required final String posterPath,
+    final String title,
+    @JsonKey(name: "vote_average") final double voteAverage,
+    @JsonKey(name: "poster_path") final String posterPath,
   }) = _$MovieImpl;
 
   factory _Movie.fromJson(Map<String, dynamic> json) = _$MovieImpl.fromJson;
@@ -237,7 +239,7 @@ abstract class _Movie implements Movie {
   String get title;
   @override
   @JsonKey(name: "vote_average")
-  double get voteAverage;
+  double get voteAverage; // 👈 Default to 0.0
   @override
   @JsonKey(name: "poster_path")
   String get posterPath;

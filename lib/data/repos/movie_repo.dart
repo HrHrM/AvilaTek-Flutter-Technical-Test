@@ -8,11 +8,14 @@ class MovieRepository {
   MovieRepository(this._apiClient);
 
   Future<List<Movie>> fetchPopularMovies() async {
-    final response = await _apiClient.get("/movie/popular");
-    final List<dynamic> results = response.data['results'];
-    final mappedResults = results.map((json) => Movie.fromJson(json)).toList();
-
-    return mappedResults;
+    try {
+      final response = await _apiClient.get('/movie/popular');
+      print('API Response: ${response.data}'); // 🔍 PRINT RAW DATA
+      final List results = response.data['results'];
+      return results.map((movie) => Movie.fromJson(movie)).toList();
+    } catch (e) {
+      throw Exception("Failed to fetch movies: $e");
+    }
   }
 
   Future<List<Actor>> fetchMovieActors(int movieID) async {

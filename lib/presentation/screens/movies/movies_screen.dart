@@ -105,6 +105,9 @@ class MoviesScreen extends StatelessWidget {
                 },
               ),
             );
+          } else if (state is MoviesError) {
+            print('ERROR: ${state.message}');
+            return Center(child: ErrorText(message: state.message));
           } else {
             return ErrorText(message: 'Request Error');
           }

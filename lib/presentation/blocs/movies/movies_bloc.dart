@@ -17,8 +17,8 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     try {
       final movies = await movieRepository.fetchPopularMovies();
       emit(MoviesLoaded(movies));
-    } catch (_) {
-      emit(MoviesError());
+    } catch (e) {
+      emit(MoviesError('Failed to fetch movies: ${e.toString()}'));
     }
   }
 }
