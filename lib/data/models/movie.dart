@@ -10,10 +10,10 @@ class Movie with _$Movie {
     @Default('No Title') String title,
     @JsonKey(name: "vote_average")
     @Default(0.0)
-    double voteAverage, // 👈 Default to 0.0
+    double voteAverage,
     @JsonKey(name: "poster_path")
     @Default('')
-    String posterPath, // 👈 Default to empty string
+    String posterPath,
   }) = _Movie;
 
   factory Movie.fromJson(Map<String, dynamic> json) => _$MovieFromJson(json);
